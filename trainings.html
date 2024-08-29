@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      font-size: 16px;
+      line-height: 1.5;
+      color: #333;
+      background: linear-gradient(to right, #FFF1F9, #FFFCF1); /* Light pink to light yellow gradient */
+      display: flex; /* Use flexbox layout */
+      flex-direction: column; /* Stack elements vertically */
+    }
+
+    header {
+      padding: 20px 0;
+      text-align: center;
+      background-color: transparent;
+    }
+
+    header h1 {
+      font-size: 32px;
+      font-weight: bold;
+      text-transform: uppercase; 
+      font-family: 'Palatino', serif; 
+      color: black; /* Corrected to use 'color' instead of 'font-color' */
+    }
+
+    /* Navigation styles */
+    nav {
+      padding: 3px 0;
+      display: flex;
+      justify-content: center;
+      background-color: rgba(255, 255, 255, 0.7); /* Transparent white background */
+      flex-wrap: wrap; /* Allow buttons to wrap on small screens */
+    }
+
+    nav button {
+      color: #333;
+      background-color: transparent; /* Background color for buttons */
+      border: none; /* Remove border */
+      padding: 10px 20px; /* Padding for buttons */
+      margin: 0 10px;
+      cursor: pointer; /* Change cursor on hover */
+      transition: background-color 0.3s, color 0.3s;
+      font-size: 16px;
+    }
+
+    nav button:hover {
+      background-color: #333; /* Change background on hover */
+      color: #fff; /* Change text color on hover */
+    }
+
+    /* Main content styles */
+    main {
+      padding: 40px 20px;
+      display: flex; /* Flexbox for main content */
+      flex-direction: column; /* Stack content vertically */
+    }
+
+    .box-container {
+      display: flex; /* Use flexbox layout for boxes */
+      justify-content: space-around; /* Space boxes evenly */
+      margin: 20px 0; /* Margin for spacing */
+    }
+
+    .box {
+      background-color: #F5F5F5; /* Background color for boxes */
+      border-radius: 5px; /* Rounded corners */
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for effect */
+      padding: 20px; /* Padding inside boxes */
+      width: 30%; /* Set width of each box */
+      text-align: center; /* Center text inside boxes */
+    }
+
+    .box img {
+      max-width: 100%; /* Responsive image */
+      height: auto; /* Maintain aspect ratio */
+      border-radius: 5px; /* Rounded corners for images */
+    }
+
+    .sidebar {
+      width: 250px; /* Fixed width for sidebar */
+      background-color: #F9F9F9; /* Light background for sidebar */
+      border-left: 1px solid #ddd; /* Divider line */
+      padding: 20px;
+      box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for effect */
+    }
+
+    .card {
+      background-color: #F5F5F5;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      margin-bottom: 30px;
+      padding: 20px;
+      transition: transform 0.2s; /* Add transition for hover effect */
+    }
+
+    .card:hover {
+      transform: scale(1.02); /* Scale effect on hover */
+    }
+
+    .card h2 {
+      font-size: 24px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .card h3 {
+      font-size: 18px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .card p {
+      margin-bottom: 20px;
+    }
+
+    .card a {
+      color: #333;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .card a:hover {
+      text-decoration: underline;
+    }
+
+    /* Mobile responsiveness */
+    @media (max-width: 768px) {
+      /* Stack boxes vertically on mobile */
+      .box-container {
+        flex-direction: column; /* Stack vertically */
+        align-items: center; /* Center boxes */
+      }
+
+      .box {
+        width: 80%; /* Make boxes wider on mobile */
+        margin-bottom: 20px; /* Add space between boxes */
+      }
+
+      /* Adjust header font size on mobile */
+      header h1 {
+        font-size: 24px; /* Smaller font size */
+      }
+
+      /* Adjust button sizes */
+      nav button {
+        padding: 10px; /* More padding for touch */
+        font-size: 14px; /* Smaller font size */
+        margin: 5px 0; /* Add vertical spacing between buttons */
+        width: 100%; /* Make buttons full width */
+      }
+
+      /* Adjust main content padding */
+      main {
+        padding: 20px; /* Less padding on mobile */
+      }
+
+      /* Adjust card section */
+      .card {
+        margin-bottom: 20px; /* More space between cards */
+      }
+
+      .card h2 {
+        font-size: 20px; /* Smaller font size for headings */
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>快速測試：你適合甚麼工作?</h1>
+  </header>
+
+  <!-- Box Container -->
+  <div class="box-container">
+    <div class="box">
+      <img src="https://via.placeholder.com/150" alt="Box 1 Image"> <!-- Replace with your image URL -->
+      <p>Box 1</p>
+    </div>
+    <div class="box">
+      <img src="https://via.placeholder.com/150" alt="Box 2 Image"> <!-- Replace with your image URL -->
+      <p>Box 2</p>
+    </div>
+    <div class="box">
+      <img src="https://via.placeholder.com/150" alt="Box 3 Image"> <!-- Replace with your image URL -->
+      <p>Box 3</p>
+    </div>
+  </div>
+
+  <main>
+    <div class="content">
+      <section class="card" id="about">
+        <h2>About</h2>
+        <p>This app provides comprehensive information and resources for women, covering topics such as health, education, career, and personal development.</p>
+      </section>
+
+      <section class="card" id="resources">
+        <h2>Resources</h2>
+        <h3>Health</h3>
+        <p>Access information on women's health, including reproductive health, mental health, and wellness tips.</p>
+        <a href="#">Learn More</a>
+
+        <h3>Education</h3>
+        <p>Explore educational opportunities, scholarships, and programs tailored for women.</p>
+        <a href="#">Explore Now</a>
+
+        <h3>Career</h3>
+        <p>Find job listings, career advice, and professional development resources for women.</p>
+        <a href="#">Browse Opportunities</a>
+      </section>
+
+      <section class="card" id="contact">
+        <h2>Contact</h2>
+        <p>Get in touch with us for more information or to provide feedback.</p>
+        <a href="#">Contact Us</a>
+      </section>
+    </div>
+  </main>
+</body>
+</html>
